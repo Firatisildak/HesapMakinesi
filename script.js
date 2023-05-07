@@ -1,12 +1,12 @@
 "use";
 var _buttonlar = document.getElementsByName("button"),
-_uzunluk = _buttonlar.length,
+_Length = _buttonlar.length,
 i=0,
-_sonuc = document.getElementById("sonuc");
+_Result = document.getElementById("result");
 
 
 
-for(i=0; i<_uzunluk; i++){
+for(i=0; i<_Length; i++){
     _buttonlar[i].onclick = hesapla;
 }
 
@@ -14,12 +14,12 @@ function hesapla(){
     var _deger = this.innerHTML;
     if(_deger == "="){
         try{
-            _sonuc.value = eval(_sonuc.value);
+            _Result.value = eval(_Result.value);
         } catch(e){
-            _sonuc.value="0";
+            _Result.value="0";
         }
         return;
     }
 
-    _sonuc.value += _deger;
+    _Result.value += _deger;
 }
